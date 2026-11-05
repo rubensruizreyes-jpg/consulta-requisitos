@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Consulta: gestión de proyectos de software</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="tarjeta">
+
+  <!-- Bienvenida -->
+  <section id="bienvenida">
+    <h1>Consulta sobre gestión de proyectos de software</h1>
+    <p>Estamos recopilando opiniones de personas con experiencia en tecnología para diseñar una herramienta que ayude a organizar, planificar y seguir proyectos de desarrollo de software.</p>
+    <p>Son 10 preguntas y toma unos 5 minutos. La participación es anónima: no pedimos nombre ni correo.</p>
+    <button type="button" id="comenzar" class="btn primario">Comenzar</button>
+  </section>
+
+  <!-- Formulario por pasos (las preguntas las dibuja app.js) -->
+  <form id="form" novalidate hidden>
+    <div class="progreso">
+      <div class="barra" role="progressbar" aria-valuemin="0" aria-valuemax="100"><div id="relleno"></div></div>
+      <span id="textoPaso"></span>
+    </div>
+    <h2 id="tituloPaso"></h2>
+    <div id="pasos"></div>
+    <input type="text" name="website" class="trampa" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <p id="errorEnvio" class="err" role="alert" hidden>No se pudo enviar. Revise su conexión e intente de nuevo; sus respuestas siguen aquí.</p>
+    <div class="nav">
+      <button type="button" id="atras" class="btn" hidden>Atrás</button>
+      <button type="button" id="siguiente" class="btn primario">Siguiente</button>
+      <button type="submit" id="enviar" class="btn primario" hidden>Enviar respuestas</button>
+    </div>
+  </form>
+
+  <!-- Confirmación -->
+  <section id="gracias" hidden>
+    <h2>Respuestas enviadas</h2>
+    <p>Gracias por su tiempo. Su opinión quedó registrada y nos ayudará a definir los requisitos del sistema.</p>
+  </section>
+
+</main>
+<script src="app.js"></script>
+</body>
+</html>
